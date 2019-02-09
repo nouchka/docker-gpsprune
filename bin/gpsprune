@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p ${HOME}/Documents/kml/
+
+docker run --rm -d \
+	-v /tmp/.X11-unix:/tmp/.X11-unix \
+	-v ${HOME}/Documents/kml/:/home/developer/kml \
+	-e DISPLAY=unix$DISPLAY \
+	--name gpsprune \
+	nouchka/gpsprune "$@"
