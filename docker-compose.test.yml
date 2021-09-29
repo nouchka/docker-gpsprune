@@ -1,0 +1,4 @@
+sut:
+  build: .
+  entrypoint: gpsprune
+  command: version

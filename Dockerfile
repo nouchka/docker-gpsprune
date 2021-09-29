@@ -10,6 +10,7 @@ ENV PUID ${PUID}
 ENV PGID ${PGID}
 
 ARG VERSION=19.2
+ENV VERSION ${VERSION}
 ARG FILE_SHA256SUM=e9714513b9f90318917bbabc6c1bfb8fa0893442bb4e777aa0699503e7bc53e0
 ENV FILE_URL https://activityworkshop.net/software/gpsprune/gpsprune_${VERSION}.jar
 
