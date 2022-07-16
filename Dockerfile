@@ -18,7 +18,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get -yq --no-install-recommends install wget=* default-jre=* && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-	wget -O /gpsprune.jar $FILE_URL && \
+	wget -O /gpsprune.jar -q $FILE_URL && \
 	sha256sum /gpsprune.jar && \
 	echo "${FILE_SHA256SUM}  /gpsprune.jar"| sha256sum -c - && \
 	export uid=${PUID} gid=${PGID} && \
